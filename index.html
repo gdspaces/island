@@ -711,13 +711,13 @@
 			belement = document.getElementById("bcell"+(i+1));
 			belement.className = "land-broder";
 			belement.style.borderTop = "4px solid transparent";
-			belement.style.borderBottom = "4px solid transparent";
+			belement.style.borderBottom = "4px solid traansparent";
 			belement.style.borderLeft = "4px solid transparent";
 			belement.style.borderRight = "4px solid transparent";
 			if (data_arr_org[i] != "." && data_arr_org[i] > 0) {
 				element = document.getElementById("cell"+(i+1));
 				element.className = "land land_"+n;
-				element.innerHTML = "<p style=\"color: #e5f3ed;\"><b>"+data_arr_org[i]+"</b></p>";
+				element.innerHTML = "<p style=\"color: #1B5E20;\"><b>"+data_arr_org[i]+"</b></p>";
 			}
 			else if (data_arr[i]=="1")	{
 				element = document.getElementById("cell"+(i+1));
@@ -875,7 +875,7 @@
 			if (data_arr_org[i] != "." && data_arr_org[i] > 0) {
 				element = document.getElementById("cell"+(i+1));
 				element.className = "land land_"+n;
-				element.innerHTML = "<p style=\"color: #e5f3ed;\"><b>"+data_arr_org[i]+"</b></p>";
+				element.innerHTML = "<p style=\"color: #1B5E20;\"><b>"+data_arr_org[i]+"</b></p>";
 			}
 			else if (data_arr_org[i]!="0")	{
 				element = document.getElementById("cell"+(i+1));
