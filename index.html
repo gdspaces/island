@@ -217,10 +217,12 @@
 		<h2>Help</h2>
 		<a class="close" href="#" onclick="closehelp()">&times;</a>
 		<div class="content">
-			The Island is a mathematical puzzle that has endured over 1000 years.<br><br>It is a sequence of moves of a knight on a chessboard such that the knight visits every box only once.<br><br>
-			This game is simple: Click boxes in L-shaped paths, like the knight in chess, and see if you can turn all the red boxes into white boxes without getting stuck! <br><br>
-			To start the game, click on any red box. Then click on the next red box with a dot on it. You can't use the empty/white boxes to move around.</br></br>If you click on boxes you can't click it again. The game will finish when every red box has been turned into White boxes.  <br><br>
-			On the Screen, you will get three buttons. <br> &bull; Restart : To restart the game <br> &bull; Undo : Undo the last move <br> &bull; Solve : Show the solution of the game. <br><br>
+			Island a binary determination puzzle based on Nurikabe.You must decide for each cell if it is green land or water stream (by clicking on them) according to the following rules:
+<ul> <li>All of the Water stream cells must be connected.</li>
+<li>Each numbered cell must be part of a island of connected green land cells.</li>
+<li>Each island must have the same number of green land cells as the number it contains (including the numbered cell).</li>
+<li>Two islands may not be connected.</li>
+<li>There cannot be any pond , i.e. 2x2 or larger blocks of water cells</li> </ul>
 		</div>
 	</div>
 </div>
@@ -645,8 +647,8 @@
 						'. 0 . . . . . . 2 0 . 0 0 0 0 . 0 0 0 0 . 2 0 . 0 . 0 . 0 0 11 . 0 . 0 . . 0 0 0 0 . 0 7 . 0 1 0 0 4 0 0 . . 0 0 0 0 1 0 0 0 0 1', 
 						'2 . 0 0 0 1 0 . 0 0 0 1 0 0 0 . 0 . 4 0 3 . 0 . 0 . 0 0 0 . 0 . 0 . 0 1 0 0 0 5 0 0 1 0 . 3 . 0 . 0 0 0 0 0 0 0 . . . . . . . 9',
 						'. 3 . 0 0 0 0 0 1 0 0 0 . 0 . . 3 0 . 2 0 4 0 0 0 0 0 0 0 0 . 0 . . . . 2 . 0 . 0 0 0 0 . 0 0 0 0 0 . 2 0 . 0 . 0 . 0 0 0 8 . 0 . 0 2 0 . 0 0 0 0 . 4 0 0 . . . 5',
-						'1 0 0 0 1 0 0 0 0 0 . 2 0 0 . 0 . 2 0 0 0 0 . 3 0 0 0 0 . 2 0 0 0 0 . 0 0 0 0 0 5 . . . 0 0 . . . 0 0 0 0 0 0 0 0 . . 0 1 0 . 0 . 2 0 . 10 0 0 . 0 0 0 0 . . . 0 3 ',
-						'1 0 0 0 1 0 0 0 1 0 . 2 0 0 0 1 0 0 0 0 0 3 . . 0 5 0 2 . 0 0 0 0 0 . 0 0 0 0 . 2 0 . . 0 . 12 0 0 0 0 0 . 0 . 0 2 . 0 . 0 0 0 . 0 0 0 0 . 0 . . . . . . . . 0 4 . '
+						'1 0 0 0 1 0 0 0 0 0 . 2 0 0 . 0 . 2 0 0 0 0 . 3 0 0 0 0 . 2 0 0 0 0 . 0 0 0 0 0 5 . . . 0 0 . . . 0 0 0 0 0 0 0 0 . . 0 1 0 . 0 . 2 0 . 10 0 0 . 0 0 0 0 . . . 0 3',
+						'1 0 0 0 1 0 0 0 1 0 . 2 0 0 0 1 0 0 0 0 0 3 . . 0 5 0 2 . 0 0 0 0 0 . 0 0 0 0 . 2 0 . . 0 . 12 0 0 0 0 0 . 0 . 0 2 . 0 . 0 0 0 . 0 0 0 0 . 0 . . . . . . . . 0 4 .'
 
 
 ]
@@ -675,7 +677,7 @@
 	
 	
 	function loadgame(){
-	for (i = 0; i < 64; i++) {
+	for (i = 0; i < 100; i++) {
 			  element = document.getElementById("cell"+(i+1));
 			  element.className = "plot";
 			  element.innerHTML = "";
