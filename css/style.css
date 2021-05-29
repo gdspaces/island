@@ -4,6 +4,8 @@
   .popup{
     width: 80% !important	;
     margin: 10vh auto !important	;
+    max-height: 70vh;
+    overflow-y: scroll;
   }
   
 .land_5{
@@ -889,11 +891,11 @@ select {
 }
 
 .popup {
-  margin: 70px auto;
+  margin: 30px auto;
   padding: 20px;
   background: #fff;
   border-radius: 5px;
-  width: 30%;
+  width: 50%;
   position: relative;
   transition: all 5s ease-in-out;
 }
