@@ -71,7 +71,7 @@
   #view {
     position: relative !important;
     min-height: 0 !important;
-	    height: 50vh !important;
+	    height: 45vh !important;
     padding-top: calc(25vh - 150px) !important;
   }
 
